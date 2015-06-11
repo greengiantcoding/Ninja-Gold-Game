@@ -1,0 +1,27 @@
+<div id='container'>
+	<p>Ninja's Current Gold: <%= session[:currentGold] %></p>
+	<p><%= flash[:notes] %> </p>
+	<div class='cubicle'>
+		<p>Farm 5-10 Gold</p>
+	<a href="/ninja/farm"><button>Go</button></a>
+	</div>
+	<div class='cubicle'>
+		<p>Cave  1-   6 Gold</p>
+		<a href="/ninja/cave"><button>Go</button></a>
+	</div>
+	<div class='cubicle'>
+		<p>House 3-5 Gold</p>
+		<a href="/ninja/house"><button>Go</button></a>
+	</div>
+	<div class='cubicle'>
+		<p>Casino -50 - 50 Gold</p>
+		<a href="/ninja/casino"><button>Go</button></a>
+	</div>
+	<a href="/ninja/reset"><button>Reset</button></a>
+</div>
+<div id='history'>
+
+<% session[:history].each do |action|%>
+<p><%= action %> </p>
+<% end %>
+</div>
